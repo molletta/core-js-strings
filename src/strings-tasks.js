@@ -245,10 +245,10 @@ function endsWith(str, substr) {
  *   formatTime(0, 0) => "00:00"
  */
 function formatTime(minutes, seconds) {
-  const minStr = minutes < 10 ? `0${minutes}` : minutes.toString();
-  const secStr = seconds < 10 ? `0${seconds}` : seconds.toString();
-
-  return `${minStr}:${secStr}`;
+  return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(
+    2,
+    '0'
+  )}`;
 }
 
 /**
